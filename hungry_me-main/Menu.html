@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            padding: 40px 20px;
+            position: fixed;
+            transform: translate(50%, 17%);
+            width: 55%;
+            height: 80%;
+            color: black;
+            background-color: white;
+            flex-direction: column;
+            border-radius: 8px;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .cart {
+            width: 50%;
+            background-color: white;
+            height: 50%;
+            border-left: 2px solid #ddd;
+            padding-left: 20px;
+        }
+
+        .food-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .food-item select {
+            margin-left: 10px;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .cart-item span {
+            margin-left: 10px;
+        }
+    </style>
+    <header>
+        <nav class="navbar">
+            <span class="menu-btn">=</span>
+            <a href="#" class="logo">
+                <img src="images/logo.jpeg" alt="logo">
+                <h2>HungryMe</h2>
+            </a>
+            <ul class="links">
+                <span class="close-btn material-symbols">X</span>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="Menu.html">Menu</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+</head>
+
+<body>
+    <div class="container">
+        <div class="section" id="lunch">
+            <h2>Lunch</h2>
+            <div class="food-item">
+                <span>Veg Rice</span>
+                <span>Rs 45</span>
+                <select onchange="updateCart('Veg Rice', 45, this.value)">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <div class="food-item">
+                <span>Additional Rice</span>
+                <span>Rs 10</span>
+                <select onchange="updateCart('Additional Rice', 10, this.value)">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <div class="food-item">
+                <span>Egg Curry</span>
+                <span>Rs 15</span>
+                <select onchange="updateCart('Egg Curry', 15, this.value)">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="section" id="dinner">
+            <h2>Dinner</h2>
+            <div class="food-item">
+                <span>Veg Rice</span>
+                <span>Rs 45</span>
+                <select onchange="updateCart('Veg Rice', 45, this.value)">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <div class="food-item">
+                <span>Additonal Rice</span>
+                <span>Rs 10</span>
+                <select onchange="updateCart('Additonal Rice', 10, this.value)">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <div class="food-item">
+                <span>Rotis</span>
+                <span>Rs 40</span>
+                <select onchange="updateCart('Rotis (x4)', 40, this.value)">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <div class="food-item">
+                <span>Omlette</span>
+                <span>Rs 20</span>
+                <select onchange="updateCart('Omlette', 20, this.value)">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+        </div>
+        <div class="section" id="additionals">
+            <h2>Additionals</h2>
+            <div class="food-item">
+                <span>Fish</span>
+                <span>Rs 40</span>
+                <select onchange="updateCart('Omlette', 40, this.value)">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <div class="food-item">
+                <span>Chicken</span>
+                <span>Rs 50</span>
+                <select onchange="updateCart('Chicken', 50, this.value)">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <div class="food-item">
+                <span>Curd</span>
+                <span>Rs 20</span>
+                <select onchange="updateCart('Curd', 20, this.value)">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+        </div>
+        <div class="cart">
+            <h2>Cart</h2>
+            <div id="cart-items"></div>
+            <h3>Total: Rs.<span id="total-price">0</span></h3>
+        </div>
+        <button onclick="downloadTxtFile()">Download Invoice</button>
+    </div>
+
+    <script>
+        let cart = {};
+
+        function updateCart(item, price, quantity) {
+            if (quantity > 0) {
+                cart[item] = { price: price, quantity: parseInt(quantity) };
+            } else {
+                delete cart[item];
+            }
+            renderCart();
+        }
+
+        function renderCart() {
+            const cartItemsDiv = document.getElementById('cart-items');
+            cartItemsDiv.innerHTML = '';
+            let totalPrice = 0;
+            let invoice=''
+            for (let item in cart) {
+                const cartItemDiv = document.createElement('div');
+                cartItemDiv.className = 'cart-item';
+                cartItemDiv.innerHTML = `<span>${item}</span> <span>${cart[item].quantity} x Rs${cart[item].price}</span>`;
+                cartItemsDiv.appendChild(cartItemDiv);
+                invoice+="\n"+cartItemDiv.innerText;
+                totalPrice += cart[item].price * cart[item].quantity;
+            }
+            document.getElementById('total-price').textContent = totalPrice.toFixed(2);
+            invoice+="\nTotal Amount: "+totalPrice
+            console.log(invoice);
+        }
+        
+
+        function downloadTxtFile() {
+            let str = invoice;
+            const element = document.createElement('a');
+            const file = new Blob([str], { type: 'text/plain' });
+            element.href = URL.createObjectURL(file);
+            element.download = "myFile.txt";
+            document.body.appendChild(element); // Required for this to work in FireFox
+            element.click();
+            document.body.removeChild(element);
+        }
+    </script>
+</body>
+
+</html>
