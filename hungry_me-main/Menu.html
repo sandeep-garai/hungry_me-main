@@ -209,6 +209,7 @@
     </div>
 
     <script>
+        var invoice='';
         let cart = {};
 
         function updateCart(item, price, quantity) {
@@ -224,7 +225,7 @@
             const cartItemsDiv = document.getElementById('cart-items');
             cartItemsDiv.innerHTML = '';
             let totalPrice = 0;
-            let invoice=''
+            
             for (let item in cart) {
                 const cartItemDiv = document.createElement('div');
                 cartItemDiv.className = 'cart-item';
