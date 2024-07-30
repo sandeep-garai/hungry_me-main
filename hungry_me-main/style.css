@@ -267,7 +267,7 @@ form button:hover{
     opacity:0;
     transform: translate(100%,-100%);
 }
-@media (max-width:950px){
+@media (max-width:850px){
 
     .navbar :is(.menu-btn, .links .close-btn){
         display: block;
