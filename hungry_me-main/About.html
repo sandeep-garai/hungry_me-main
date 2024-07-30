@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodaroo</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contain {
+            display: flex;
+            padding: 40px 20px;
+            position: fixed;
+            transform: translate(45%, 17%);
+            width: 55%;
+            height: 80%;
+            color: black;
+            background-color: white;
+            flex-direction: column;
+            border-radius: 8px;
+            overflow-x: auto;
+            overflow-y: auto;
+            opacity: 1;
+        }
+
+        .about-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            padding: 0px 20px;
+        }
+        .about-section .value{
+            padding: 10px;
+        }
+        @media (max-width:700px) {
+            .contain{
+                transform: translate(20%,20%);
+                width:74%;
+                transition: 0.5s ease;
+            }
+            .about-section{
+                flex-direction: column;
+            }
+        }
+    </style>
+    <script src="script.js" defer></script>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="images/logo.jpeg" alt="logo">
+                <h2>HungryMe</h2>
+            </a>
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="Menu.html">Menu</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+</head>
+
+<body>
+    <div class="contain">
+        <h1 class="about-title">About Us</h1>
+        <div class="about-section">
+            <br>
+            <div class="company-info value">
+                <h2>Our Company</h2>
+                <p>Welcome to Homemade Food Service! We are dedicated to bringing you the best homemade meals right to
+                    your doorstep or ready for you to dine-in. Our mission is to provide delicious, home-cooked meals
+                    that are made with love and care, using the freshest ingredients.</p>
+                <p>Our team of passionate chefs works tirelessly to create a menu that satisfies all tastes and dietary
+                    preferences. Whether you are craving traditional comfort food or looking for healthy, wholesome
+                    options, we have something for everyone.</p>
+            </div>
+            <br>
+            <div class="team-info value">
+                <h2>Our Team</h2>
+                <p>Our team is composed of talented individuals who share a love for food and a commitment to excellent
+                    service. From our chefs to our delivery personnel, every member of our team is dedicated to ensuring
+                    that you have a wonderful dining experience.</p>
+                <p>We believe in the power of good food to bring people together, and we are proud to be a part of your
+                    daily life.</p>
+            </div>
+            <br>
+            <div class="values-info value">
+                <h2>Our Values</h2>
+                <p>At Homemade Food Service, we believe in quality, transparency, and sustainability. We source our
+                    ingredients from local farmers and suppliers who share our commitment to fresh and ethical produce.
+                </p>
+                <p>We are constantly striving to reduce our environmental footprint and make a positive impact on our
+                    community. Your satisfaction is our top priority, and we are always here to listen to your feedback
+                    and improve our services.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodaroo</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contain {
+            display: flex;
+            padding: 40px 20px;
+            position: fixed;
+            transform: translate(45%, 17%);
+            width: 55%;
+            height: 80%;
+            color: black;
+            background-color: white;
+            flex-direction: column;
+            border-radius: 8px;
+            overflow-x: auto;
+            overflow-y: auto;
+            opacity: 1;
+        }
+
+        .service-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            padding: 0px 20px;
+        }
+        .service-section .value{
+            padding: 10px;
+        }
+        @media (max-width:700px) {
+            .contain{
+                transform: translate(20%,20%);
+                width:74%;
+                transition: 0.5s ease;
+            }
+            .service-section{
+                flex-direction: column;
+            }
+        }
+    </style>
+    <script src="script.js" defer></script>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="images/logo.jpeg" alt="logo">
+                <h2>HungryMe</h2>
+            </a>
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="Menu.html">Menu</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+</head>
+
+<body>
+    <div class="contain">
+        <h1 class="services-title">Our Services</h1>
+        <div class="service-section">
+            <div class="dine-in-service value">
+                <h2>Dine In</h2>
+                <p>Experience the cozy ambiance of our restaurant while enjoying our homemade meals. Our dine-in service offers a comfortable and welcoming atmosphere for you to enjoy your favorite dishes with friends and family.</p>
+                <p>Our staff is dedicated to providing excellent service to ensure that your dining experience is memorable and enjoyable.</p>
+            </div>
+            <div class="takeaway-service value">
+                <h2>Takeaway</h2>
+                <p>In a rush? Our takeaway service is perfect for those who are on the go. Simply place your order, and we'll have it ready for you to pick up at your convenience.</p>
+                <p>Enjoy the same delicious, home-cooked meals without the wait. Perfect for busy professionals and families alike.</p>
+            </div>
+            <div class="delivery-service value">
+                <h2>Delivery</h2>
+                <p>Enjoy our homemade meals from the comfort of your home with our reliable delivery service. We deliver fresh and hot meals right to your doorstep, ensuring that you enjoy the same quality and taste as you would in our restaurant.</p>
+                <p>Our delivery service is fast, convenient, and designed to meet your needs, whether you're ordering for yourself or for a group.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

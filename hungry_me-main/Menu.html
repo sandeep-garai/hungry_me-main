@@ -25,6 +25,7 @@
             border-radius: 8px;
             overflow-x: hidden;
             overflow-y: auto;
+            opacity: 1;
         }
 
         .section {
@@ -60,19 +61,17 @@
         }
     </style>
     <header>
-        <nav class="navbar">
-            <span class="menu-btn">=</span>
-            <a href="#" class="logo">
+        <nav class="navbar">          
+            <a href="index.html" class="logo">
                 <img src="images/logo.jpeg" alt="logo">
                 <h2>HungryMe</h2>
             </a>
-            <ul class="links">
-                <span class="close-btn material-symbols">X</span>
+            <ul class="links">             
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#">About Us</a></li>
+                <li><a href="About.html">About Us</a></li>
                 <li><a href="Menu.html">Menu</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
@@ -80,6 +79,7 @@
 
 <body>
     <div class="container">
+        <h1>Menu</h1>
         <div class="section" id="lunch">
             <h2>Lunch</h2>
             <div class="food-item">
@@ -209,9 +209,8 @@
     </div>
 
     <script>
-        var invoice='';
+        var invoice = '';
         let cart = {};
-
         function updateCart(item, price, quantity) {
             if (quantity > 0) {
                 cart[item] = { price: price, quantity: parseInt(quantity) };
@@ -225,20 +224,21 @@
             const cartItemsDiv = document.getElementById('cart-items');
             cartItemsDiv.innerHTML = '';
             let totalPrice = 0;
-            
+
             for (let item in cart) {
                 const cartItemDiv = document.createElement('div');
                 cartItemDiv.className = 'cart-item';
                 cartItemDiv.innerHTML = `<span>${item}</span> <span>${cart[item].quantity} x Rs${cart[item].price}</span>`;
                 cartItemsDiv.appendChild(cartItemDiv);
-                invoice+="\n"+cartItemDiv.innerText;
+                invoice='';
+                invoice += "\n" + cartItemsDiv.innerText;
                 totalPrice += cart[item].price * cart[item].quantity;
             }
             document.getElementById('total-price').textContent = totalPrice.toFixed(2);
-            invoice+="\nTotal Amount: "+totalPrice
+            invoice += "\nTotal Amount: " + totalPrice;
             console.log(invoice);
         }
-        
+
 
         function downloadTxtFile() {
             let str = invoice;

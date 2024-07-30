@@ -8,10 +8,13 @@ const loginSignUp = document.querySelectorAll(".form-box .bottom-link a");
 const showContent=document.querySelector(".content");
 const showContentBtn=document.querySelector(".content button");
 
+const showMeals=document.querySelector(".container");
+
 //menu button
 menuBtn.addEventListener("click", () => {
     navbarMenu.classList.toggle("show-menu");
     showContent.classList.toggle("show-content");
+    showMeals.classList.toggle("showMeals");
 })
 //hide menu
 hideMenuBtn.addEventListener("click", () => {

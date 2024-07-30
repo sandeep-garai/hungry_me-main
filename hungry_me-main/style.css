@@ -138,23 +138,26 @@ header{
     text-align: center;
     align-items: center;
     justify-content: center;
-    background:url("images/L1.jpeg");
+    background:url("images/L1.png");
     background-size: cover;
     background-position: center;
 }
 .login .form-details{
-    background:url("images/L1.jpeg");
+    background:url("images/L1.png");
     background-size: cover;
     background-position: center;
 }
 .login .form-details{
-    background:url("images/L2.jpeg");
+    background:url("images/L2.png");
     background-size: cover;
     background-position: center;
 }
 .form-box h2{
     text-align: center;
     margin-bottom: 35px;
+}
+.form-box .form-details-login{
+    color: black;
 }
 .form-box .form-content{
     width:100%;
@@ -262,6 +265,7 @@ form button:hover{
 }
 .show-content{
     opacity:0;
+    transform: translate(100%,-100%);
 }
 @media (max-width:950px){
 
@@ -271,9 +275,7 @@ form button:hover{
     .navbar{
         padding: 15px 0;
     }
-    .navbar .logo img{
-        display:none;
-    }
+    
     .navbar .logo{
         font-size: 1.4rem;
     }
@@ -313,5 +315,13 @@ form button:hover{
     }
     .form-box .form-content{
         padding: 30px 20px;
+    }
+}
+@media (max-width:720px){
+    .content h1{
+        font-size: 50px;
+    }
+    .content h3{
+        font-size: 30px;
     }
 }
