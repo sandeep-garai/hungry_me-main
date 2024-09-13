@@ -4,9 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foodaroo</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <meta name="description"
+        content="Foodaroo by HungryMe - Order delicious food online for delivery, dine-in, or takeaway. Explore our menu and enjoy quick, easy, and safe food ordering.">
+    <meta property="og:title" content="Foodaroo - Order Delicious Food Online | HungryMe">
+    <meta property="og:description"
+        content="Explore Foodaroo by HungryMe - quick and easy food delivery, dine-in, or takeaway options.">
+    <meta property="og:image" content="https://www.fooddaroo.com/images/food-sample.jpg">
+    <meta property="og:url" content="https://www.fooddaroo.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Foodaroo - Order Delicious Food Online | HungryMe">
+    <meta name="twitter:description"
+        content="Order food easily and enjoy fast delivery or dine-in services with Foodaroo by HungryMe.">
+    <meta name="twitter:image" content="https://www.fooddaroo.com/images/food-sample.jpg">
+    <title>Foodaroo - Order Delicious Food Online | HungryMe</title>
+    <!-- <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script> -->
+      <!-- Preload critical resources -->
+  <link rel="preload" href="style.css" as="style">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preload" href="images/logo.jpeg" as="image">
+  <script src="script.js" defer></script>
+
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Foodaroo by HungryMe",
+    "url": "https://www.fooddaroo.com",
+    "logo": "https://www.fooddaroo.com/images/logo.jpeg",
+    "servesCuisine": "International",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "City Name",
+      "addressRegion": "State Name",
+      "postalCode": "12345",
+      "streetAddress": "123 Main Street"
+    }
+  }
+  </script>
 </head>
 
 <body>
@@ -14,7 +49,7 @@
         <nav class="navbar">
             <span class="menu-btn">=</span>
             <a href="index.html" class="logo">
-                <img src="images/logo.jpeg" alt="logo">
+                <img src="images/logo.jpeg" alt="HungryMe Logo - Food Delivery and Dine-in Service">
                 <h2>HungryMe</h2>
             </a>
             <ul class="links">
@@ -28,69 +63,69 @@
             <button class="login-btn">LOG IN</button>
         </nav>
     </header>
-    <!--content-->
-    
-    <!--popup form-->
-    <div class="bg-blur"></div>
+
+    <!-- Main content section -->
     <div class="content">
         <h1>Are you Hungry</h1>
         <h3>Don't Wait!!</h3>
-        <h3>Let's start ordering food now!<br></h3>
+        <h3>Let's start ordering food now!</h3>
         <button class="content-login-btn">LOG IN</button>
     </div>
+
+    <!-- Popup forms -->
+    <div class="bg-blur"></div>
+
     <div class="form-popup">
         <span class="close-btn material-symbols">X</span>
+
+        <!-- Login Form -->
         <div class="form-box login">
             <div class="form-details form-details-login">
                 <h2>Welcome Back</h2>
-                <p>Please log in using your personal information to stay conneted with us</p>
+                <p>Please log in using your personal information to stay connected with us</p>
             </div>
             <div class="form-content">
                 <h2>LOGIN</h2>
                 <form action="#">
                     <div class="input-field">
                         <input type="email" placeholder="Email" required>
-                        <label for="email"</label>
+                        <label for="email">Email</label>
                     </div>
                     <div class="input-field">
                         <input type="password" placeholder="Password" required>
-                        <label for="password"></label>
+                        <label for="password">Password</label>
                     </div>
                     <a href="#" class="forgot-pass">Forgot Password?</a>
                     <button type="submit">Log in</button>
                 </form>
-                <div class="bottom-link">
-                    Don't have an account?
-                    <a href="#" id="signup-link">Sign UP</a>
-                </div>
+                <div class="bottom-link">Don't have an account? <a href="#" id="signup-link">Sign UP</a></div>
             </div>
         </div>
+
+        <!-- Signup Form -->
         <div class="form-box signup">
             <div class="form-details">
                 <h2>Create Account</h2>
-                <p>To connect with us, pleae sign up with us</p>
+                <p>To connect with us, please sign up with us</p>
             </div>
             <div class="form-content">
                 <h2>SIGN UP</h2>
                 <form action="#">
                     <div class="input-field">
                         <input type="email" placeholder="Enter Email" required>
-                        <label for="email"</label>
+                        <label for="email">Enter Email</label>
                     </div>
                     <div class="input-field">
                         <input type="password" placeholder="Create Password" required>
-                        <label for="password"></label>
+                        <label for="password">Create Password</label>
                     </div>
                     <div class="policy-text">
                         <input type="checkbox" id="policy">
-                        <label for="policy">I agree to the <a href="#">terms and conditiions</a></label>
+                        <label for="policy">I agree to the <a href="#">terms and conditions</a></label>
                     </div>
                     <button type="submit">Sign Up</button>
                 </form>
-                <div class="bottom-link">
-                    Already have an account?
-                    <a href="#" id="login-link">Login</a>
-                </div>
+                <div class="bottom-link">Already have an account? <a href="#" id="login-link">Login</a></div>
             </div>
         </div>
     </div>
